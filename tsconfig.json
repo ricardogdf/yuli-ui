@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "types": ["vitest", "node"],
+    "declaration": true,
+    "declarationDir": "dist",
+    "emitDeclarationOnly": true,
+    "baseUrl": "."
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.test.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}

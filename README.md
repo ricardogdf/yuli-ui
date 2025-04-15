@@ -4,11 +4,6 @@ Yuli UI é uma biblioteca de componentes React moderna e acessível, construída
 
 ## 🚀 Começando
 
-### Pré-requisitos
-
-- Node.js (versão 18 ou superior)
-- npm (versão 9 ou superior)
-
 ### Instalação
 
 1. Clone o repositório:
@@ -69,38 +64,6 @@ src/
 ├── assets/            # Recursos estáticos
 └── index.ts          # Ponto de entrada
 ```
-
-## 🎨 Design System
-
-### Princípios
-
-- **Acessibilidade**: Todos os componentes seguem as diretrizes WCAG 2.1
-- **Consistência**: Design consistente em todos os componentes
-- **Customização**: Fácil personalização através de props e CSS
-- **Performance**: Componentes otimizados para performance
-
-### Componentes Disponíveis
-
-- Button
-  - Variantes: primary, secondary, outline
-  - Tamanhos: small, medium, large
-  - Estados: disabled, loading
-
-## 📚 Documentação
-
-A documentação completa está disponível no Storybook, incluindo:
-- Exemplos de uso
-- Props e tipos
-- Acessibilidade
-- Boas práticas
-
-## 🤝 Contribuindo
-
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
 
 ## 📝 Licença
 

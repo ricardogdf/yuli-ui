@@ -56,17 +56,6 @@ npm run build
 npm publish --access public
 ```
 
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/yuli-ui.git
-cd yuli-ui
-```
-
-2. Instale as dependências:
-```bash
-npm install
-```
-
 ## 📦 Estrutura do Projeto
 
 ```

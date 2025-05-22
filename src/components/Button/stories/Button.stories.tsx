@@ -1,84 +1,64 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '../Button';
-import '../Button.css';
+import type { Meta, StoryObj } from "@storybook/react";
+import { Button } from "../Button";
 
-const meta = {
-  title: 'Components/Button',
+const meta: Meta<typeof Button> = {
+  title: "Components/Button",
   component: Button,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   argTypes: {
-    texto: {
-      control: 'text',
-      description: 'Texto exibido no botão',
-    },
     variant: {
-      control: 'select',
-      options: ['primary', 'secondary', 'outline'],
-      description: 'Variante do botão',
+      control: "select",
+      options: ["contained", "outline", "ghost"],
     },
     size: {
-      control: 'select',
-      options: ['small', 'medium', 'large'],
-      description: 'Tamanho do botão',
+      control: "select",
+      options: ["sm", "md", "lg"],
     },
-    disabled: {
-      control: 'boolean',
-      description: 'Estado de desabilitado',
+    animation: {
+      control: "select",
+      options: ["none", "slide"],
     },
-  },
-} satisfies Meta<typeof Button>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Primary: Story = {
-  args: {
-    texto: 'Botão Primário',
-    variant: 'primary',
-    size: 'medium',
   },
 };
 
-export const Secondary: Story = {
+export default meta;
+type Story = StoryObj<typeof Button>;
+
+export const Primary: Story = {
   args: {
-    texto: 'Botão Secundário',
-    variant: 'secondary',
-    size: 'medium',
+    children: "Primary Button",
+    variant: "contained",
+    size: "md",
+    animation: "none",
+  },
+};
+
+export const Contained: Story = {
+  args: {
+    children: "Contained Button",
+    variant: "contained",
+    size: "md",
+    animation: "none",
   },
 };
 
 export const Outline: Story = {
   args: {
-    texto: 'Botão Outline',
-    variant: 'outline',
-    size: 'medium',
+    children: "Outline Button",
+    variant: "outline",
+    size: "md",
+    animation: "none",
   },
 };
 
-export const Small: Story = {
+export const Ghost: Story = {
   args: {
-    texto: 'Botão Pequeno',
-    variant: 'primary',
-    size: 'small',
+    children: "Ghost Button",
+    variant: "ghost",
+    size: "md",
+    animation: "none",
   },
 };
-
-export const Large: Story = {
-  args: {
-    texto: 'Botão Grande',
-    variant: 'primary',
-    size: 'large',
-  },
-};
-
-export const Disabled: Story = {
-  args: {
-    texto: 'Botão Desabilitado',
-    variant: 'primary',
-    size: 'medium',
-    disabled: true,
-  },
-}; 

@@ -1,6 +1,6 @@
 # Yuli UI
 
-Yuli UI é uma biblioteca de componentes React moderna e acessível, construída com TypeScript, Vite e Storybook.
+Yuli UI é uma biblioteca de componentes React com um toque de animações, construída com TypeScript, Vite e Storybook.
 
 ## 🚀 Começando
 

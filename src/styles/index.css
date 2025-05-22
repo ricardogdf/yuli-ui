@@ -4,20 +4,25 @@
 
 @layer base {
   :root {
-    --primary: 0, 0%, 0%;
-    --primary-foreground: 210 40% 98%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --border: 214.3 31.8% 91.4%;
-    --radius: 0.5rem;
+    --background: 0, 0%, 0%;
+    --foreground: 210 40% 98%;
+
+    --text: 0, 100%, 100%;
+    --text-foreground: 0, 0%, 0%;
+
+    --border: 180, 0%, 70%;
+    --border-foreground: 0, 100%, 50%;
   }
 
   .dark {
-    --primary: 200, 90%, 60%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
+    --background: 0, 100%, 100%;
+    --foreground: 210 40% 98%;
+
+    --text: 0, 0%, 0%;
+    --text-foreground: 0, 100%, 100%;
+
+    --border: 180, 0%, 70%;
+    --border-foreground: 0, 100%, 100%;
   }
 }
 
@@ -26,6 +31,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-text;
   }
 }

@@ -9,16 +9,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+        background: {
+          DEFAULT: "hsl(var(--background))",
+          foreground: "hsl(var(--foreground))",
         },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+        text: {
+          DEFAULT: "hsl(var(--text))",
+          foreground: "hsl(var(--text-foreground))",
+        },
+        border: {
+          DEFAULT: "hsl(var(--border))",
+          foreground: "hsl(var(--border-foreground))",
         },
       },
       keyframes: {

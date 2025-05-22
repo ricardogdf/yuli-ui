@@ -9,6 +9,9 @@ const meta: Meta<typeof Button> = {
   },
   tags: ["autodocs"],
   argTypes: {
+    label: {
+      control: "text",
+    },
     variant: {
       control: "select",
       options: ["contained", "outline", "ghost"],
@@ -27,18 +30,9 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
-  args: {
-    children: "Primary Button",
-    variant: "contained",
-    size: "md",
-    animation: "none",
-  },
-};
-
 export const Contained: Story = {
   args: {
-    children: "Contained Button",
+    label: "Contained Button",
     variant: "contained",
     size: "md",
     animation: "none",
@@ -47,7 +41,7 @@ export const Contained: Story = {
 
 export const Outline: Story = {
   args: {
-    children: "Outline Button",
+    label: "Outline Button",
     variant: "outline",
     size: "md",
     animation: "none",
@@ -56,7 +50,7 @@ export const Outline: Story = {
 
 export const Ghost: Story = {
   args: {
-    children: "Ghost Button",
+    label: "Ghost Button",
     variant: "ghost",
     size: "md",
     animation: "none",

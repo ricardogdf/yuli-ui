@@ -7,12 +7,9 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        contained:
-          "bg-primary text-primary-foreground dark:bg-primary-foreground",
-        outline:
-          "border border-input bg-background text-foreground hover:bg-accent hover:text-accent-foreground dark:border-input dark:bg-background dark:text-foreground dark:hover:bg-accent dark:hover:text-accent-foreground",
-        ghost:
-          "text-foreground hover:bg-accent hover:text-accent-foreground dark:text-foreground dark:hover:bg-accent dark:hover:text-accent-foreground",
+        contained: "bg-background text-text",
+        outline: "border border-input text-text-foreground",
+        ghost: "text-text-foreground",
       },
       size: {
         sm: "h-9 rounded-md px-3",
@@ -34,16 +31,20 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {}
+    VariantProps<typeof buttonVariants> {
+  label?: string;
+}
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, animation, ...props }, ref) => {
+  ({ className, label, variant, size, animation, ...props }, ref) => {
     return (
       <button
         ref={ref}
         className={cn(buttonVariants({ variant, size, animation }), className)}
         {...props}
-      />
+      >
+        {label ?? props.children}
+      </button>
     );
   }
 );
